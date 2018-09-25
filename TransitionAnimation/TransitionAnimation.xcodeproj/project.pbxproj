@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180549A9215A08CC0087154E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180549A7215A08CC0087154E /* PlayerViewController.m */; };
+		180549AA215A08CC0087154E /* RotateTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180549A8215A08CC0087154E /* RotateTransitionDelegate.m */; };
 		1842D6822158E2CE004789BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842D6812158E2CE004789BC /* AppDelegate.m */; };
 		1842D6852158E2CE004789BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842D6842158E2CE004789BC /* ViewController.m */; };
 		1842D6882158E2CE004789BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1842D6862158E2CE004789BC /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180549A5215A08CC0087154E /* RotateTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateTransitionDelegate.h; sourceTree = "<group>"; };
+		180549A6215A08CC0087154E /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		180549A7215A08CC0087154E /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		180549A8215A08CC0087154E /* RotateTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateTransitionDelegate.m; sourceTree = "<group>"; };
 		1842D67D2158E2CE004789BC /* TransitionAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1842D6802158E2CE004789BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1842D6812158E2CE004789BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 				1842D6812158E2CE004789BC /* AppDelegate.m */,
 				1842D6832158E2CE004789BC /* ViewController.h */,
 				1842D6842158E2CE004789BC /* ViewController.m */,
+				180549A6215A08CC0087154E /* PlayerViewController.h */,
+				180549A7215A08CC0087154E /* PlayerViewController.m */,
+				180549A5215A08CC0087154E /* RotateTransitionDelegate.h */,
+				180549A8215A08CC0087154E /* RotateTransitionDelegate.m */,
 				1842D6862158E2CE004789BC /* Main.storyboard */,
 				1842D6892158E2CF004789BC /* Assets.xcassets */,
 				1842D68B2158E2CF004789BC /* LaunchScreen.storyboard */,
@@ -142,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1842D6852158E2CE004789BC /* ViewController.m in Sources */,
+				180549AA215A08CC0087154E /* RotateTransitionDelegate.m in Sources */,
+				180549A9215A08CC0087154E /* PlayerViewController.m in Sources */,
 				1842D6902158E2CF004789BC /* main.m in Sources */,
 				1842D6822158E2CE004789BC /* AppDelegate.m in Sources */,
 			);
