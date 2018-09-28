@@ -29,6 +29,18 @@
     // 将目标视图添加到容器视图中
     [containerView addSubview:toView];
     
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                          delay:0.0
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:10
+                        options:0
+                     animations:^{
+                         
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+    
     // 转场动画的末尾必须调用的方法
     [transitionContext completeTransition:YES];
 }
