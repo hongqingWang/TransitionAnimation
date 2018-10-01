@@ -14,9 +14,19 @@
 
 @implementation PlayerViewController
 
+#pragma mark - Life Cycle
+- (void)loadView {
+    
+    self.view = [[UIView alloc] init];
+    
+    self.view.layer.anchorPoint = CGPointMake(0.5, 1.0);
+    
+    self.view.frame = [UIScreen mainScreen].bounds;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {

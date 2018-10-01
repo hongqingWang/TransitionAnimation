@@ -26,9 +26,11 @@
     // 目标视图
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     
+    // 设置初始形变
+    toView.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    
     // 将目标视图添加到容器视图中
     [containerView addSubview:toView];
-    
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
@@ -37,16 +39,18 @@
                         options:0
                      animations:^{
                          
+                         // 恢复视图的形变
+                         toView.transform = CGAffineTransformIdentity;
+                         
                      } completion:^(BOOL finished) {
                          
+                         // 转场动画的末尾必须调用的方法
+                         [transitionContext completeTransition:YES];
                      }];
-    
-    // 转场动画的末尾必须调用的方法
-    [transitionContext completeTransition:YES];
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.25;
+    return 2.5;
 }
 
 @end
