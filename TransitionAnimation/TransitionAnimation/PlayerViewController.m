@@ -24,6 +24,9 @@
     self.view.backgroundColor = [UIColor redColor];
     
     self.view.frame = [UIScreen mainScreen].bounds;
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
+    [self.view addGestureRecognizer:pan];
 }
 
 - (void)viewDidLoad {
@@ -31,19 +34,25 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)panGesture:(UIPanGestureRecognizer *)recognizer {
+    
+    CGPoint point = [recognizer translationInView:self.view];
+    
+    CGAffineTransform transform = self.view.transform;
+    CGFloat viewAngle = atan2(transform.b, transform.a);
+    
+    CGFloat dx = point.x * cos(viewAngle);
+    CGFloat dy = point.y * sin(viewAngle);
+    
+    CGFloat angle = (dx + dy) / self.view.bounds.size.width;
+    
+    transform = CGAffineTransformRotate(transform, angle);
+    transform.tx += 1 * (dx + dy);
+    //    transform = CGAffineTransformTranslate(transform, dx + dy, 0);
+    
+    self.view.transform = transform;
+    
+    [recognizer setTranslation:CGPointZero inView:self.view];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
